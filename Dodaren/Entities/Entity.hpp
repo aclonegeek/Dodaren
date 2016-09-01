@@ -20,7 +20,10 @@ public:
 		m_active = 0;
 	}
 
-	virtual void collision(Entity& entity) = 0;
+	virtual void collision(Entity& entity) {
+		destroy();
+		entity.destroy();
+	}
 
 	bool checkCollision(Entity& entity) {
 		return m_sprite.getGlobalBounds().intersects(entity.getSprite().getGlobalBounds());
