@@ -9,7 +9,7 @@ public:
 
 	virtual void load(Textures::ID id, const std::string& filePath) {
 		textureMap.load(id, filePath);
-		m_sprite.setTexture(m_texture);
+		m_sprite.setTexture(textureMap.get(id));
 	}
 
 	virtual void update(const sf::Time& dt) {
@@ -42,6 +42,4 @@ protected:
 
 	sf::Sprite		m_sprite;
 	sf::Vector2f	m_velocity;
-private:
-	sf::Texture		m_texture;
 };
