@@ -62,7 +62,7 @@ private:
 
 namespace Textures {
 	enum class ID {
-
+		Player
 	};
 }
 
