@@ -14,6 +14,7 @@ public:
 
 	virtual void update(const sf::Time& dt) {
 		m_sprite.move(m_velocity * dt.asSeconds());
+		m_velocity = { 0.0f, 0.0f };
 	}
 
 	virtual void destroy() {

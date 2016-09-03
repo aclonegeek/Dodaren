@@ -2,8 +2,6 @@
 #include "../Animation.hpp"
 #include "EntityManager.hpp"
 
-// todo: fix idle animations
-
 enum class Direction {
 	LEFT,
 	RIGHT
@@ -27,4 +25,9 @@ private:
 	std::unique_ptr<Animation> m_animation;
 
 	Direction m_facing;
+
+	const float m_walkSpeed;
+
+	float m_dx;
+	float m_dy;
 };
