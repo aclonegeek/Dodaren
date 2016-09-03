@@ -8,4 +8,3 @@ Dodaren is a 2D game framework made in C++ using SFML.
 
 # Credits
 * [SFML Game Development Book](https://github.com/SFML/SFML-Game-Development-Book)
-* [CaveStory SDL Clone](https://github.com/Limeoats/cavestory-development)
