@@ -26,13 +26,12 @@ void Animation::reset() {
 	m_animations.clear();
 }
 
-void Animation::play(std::string animation, const sf::Time& dt, bool playOnce /* = false */) {
+void Animation::play(std::string animation, bool playOnce /* = false */) {
 	m_playOnce = playOnce;
 	if (m_currentAnimation != animation) {
 		m_currentAnimation = animation;
 		m_frameIndex = 0;
 	}
-	update(dt);
 }
 
 void Animation::stop() {

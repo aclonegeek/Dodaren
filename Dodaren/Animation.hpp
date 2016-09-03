@@ -14,7 +14,7 @@ public:
 
 	void add(std::string name, int frames, int x, int y, int width, int height);
 	void setVisible(bool visible);
-	void play(std::string animation, const sf::Time& dt, bool playOnce = false);
+	void play(std::string animation, bool playOnce = false);
 	void stop();
 	void reset();
 	void update(const sf::Time& dt);
