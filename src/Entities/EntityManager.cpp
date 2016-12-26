@@ -1,7 +1,7 @@
 #include "EntityManager.hpp"
 
 EntityManager::EntityManager(sf::RenderWindow& window)
-    : m_window{ window } {}
+: m_window{ window } {}
 
 void EntityManager::add(const std::string& name, std::unique_ptr<Entity> entity) {
     m_entities.insert(std::make_pair(name, std::move(entity)));

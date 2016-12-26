@@ -2,12 +2,12 @@
 
 Animation::Animation(sf::Sprite& spriteSheet, float duration, int sourceX, int sourceY,
     int width, int height, float posX, float posY) 
-    : m_spriteSheet{ spriteSheet }
-    , m_duration{ duration }
-    , m_frameIndex{ 0 }
-    , m_visible{ true }
-    , m_currentAnimation{ "" }
-    , m_timeElapsed{ 0 } {
+: m_spriteSheet{ spriteSheet }
+, m_duration{ duration }
+, m_frameIndex{ 0 }
+, m_visible{ true }
+, m_currentAnimation{ "" }
+, m_timeElapsed{ 0 } {
     
 }
 
