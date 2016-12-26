@@ -52,8 +52,8 @@ public:
 		return *found->second;
 	}
 private:
-	void insert(Identifier id, std::unique_ptr<Music> Music) {
-		auto inserted = m_musicMap.insert(std::make_pair(id, std::move(Music)));
+	void insert(Identifier id, std::unique_ptr<Music> music) {
+		auto inserted = m_musicMap.insert(std::make_pair(id, std::move(music)));
 		assert(inserted.second);
 	}
 
