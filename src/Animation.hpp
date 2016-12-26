@@ -9,26 +9,26 @@
 
 class Animation {
 public:
-	Animation(sf::Sprite& sprite, float duration, int sourceX, int sourceY,
-		int width, int height, float posX, float posY);
+    Animation(sf::Sprite& sprite, float duration, int sourceX, int sourceY,
+        int width, int height, float posX, float posY);
 
-	void add(std::string name, int frames, int x, int y, int width, int height);
-	void setVisible(bool visible);
-	void play(std::string animation, bool playOnce = false);
-	void stop();
-	void reset();
-	void update(const sf::Time& dt);
+    void add(std::string name, int frames, int x, int y, int width, int height);
+    void setVisible(bool visible);
+    void play(std::string animation, bool playOnce = false);
+    void stop();
+    void reset();
+    void update(const sf::Time& dt);
 private:
-	sf::Sprite& m_spriteSheet;
+    sf::Sprite& m_spriteSheet;
 
-	std::vector<sf::IntRect> m_frames;
-	std::map<std::string, std::vector<sf::IntRect>> m_animations;
-	
-	float m_duration;
-	std::string m_currentAnimation;
+    std::vector<sf::IntRect> m_frames;
+    std::map<std::string, std::vector<sf::IntRect>> m_animations;
+    
+    float m_duration;
+    std::string m_currentAnimation;
 
-	unsigned int m_frameIndex;
-	bool m_visible;
-	bool m_playOnce;
-	float m_timeElapsed;
+    unsigned int m_frameIndex;
+    bool m_visible;
+    bool m_playOnce;
+    float m_timeElapsed;
 };

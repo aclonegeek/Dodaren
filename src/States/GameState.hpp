@@ -7,17 +7,17 @@
 
 class GameState : public State {
 public:
-	GameState(StateManager& stateManager, sf::RenderWindow& window);
+    GameState(StateManager& stateManager, sf::RenderWindow& window);
     ~GameState();
 
-	void pause();
-	void resume();
+    void pause();
+    void resume();
 
-	void processEvents();
-	void update(const sf::Time& dt);
-	void draw();
+    void processEvents();
+    void update(const sf::Time& dt);
+    void draw();
 private:
-	EntityManager m_entityManager;
+    EntityManager m_entityManager;
 
-	std::unique_ptr<Player> m_player;
+    std::unique_ptr<Player> m_player;
 };

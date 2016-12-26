@@ -3,13 +3,13 @@
 
 class MenuState : public State {
 public:
-	MenuState(StateManager& stateManager, sf::RenderWindow& window);
+    MenuState(StateManager& stateManager, sf::RenderWindow& window);
     ~MenuState();
 
-	void pause();
-	void resume();
+    void pause();
+    void resume();
 
-	void processEvents();
-	void update(const sf::Time& dt);
-	void draw();
+    void processEvents();
+    void update(const sf::Time& dt);
+    void draw();
 };

@@ -6,11 +6,11 @@
 
 class Game {
 public:
-	Game() {}
-	void run();
+    Game() {}
+    void run();
 private:
-	static const sf::Time TimePerFrame;
+    static const sf::Time TimePerFrame;
 
-	StateManager m_stateManager;
-	sf::RenderWindow m_window;
+    StateManager m_stateManager;
+    sf::RenderWindow m_window;
 };

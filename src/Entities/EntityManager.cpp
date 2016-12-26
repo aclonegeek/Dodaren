@@ -1,46 +1,46 @@
 #include "EntityManager.hpp"
 
 EntityManager::EntityManager(sf::RenderWindow& window)
-	: m_window{ window } {}
+    : m_window{ window } {}
 
 void EntityManager::add(const std::string& name, std::unique_ptr<Entity> entity) {
-	m_entities.insert(std::make_pair(name, std::move(entity)));
+    m_entities.insert(std::make_pair(name, std::move(entity)));
 }
 
 void EntityManager::update(const sf::Time& dt) {
-	for (auto& entity : m_entities) {
-		// if (check current group)
-		for (auto& entity2 : m_entities) {
-			// if (check if they are not the same entities)
-				// if (check collision)
-					// collision
-		}
+    for (auto& entity : m_entities) {
+        // if (check current group)
+        for (auto& entity2 : m_entities) {
+            // if (check if they are not the same entities)
+                // if (check collision)
+                    // collision
+        }
 
-		if (entity.second->isActive()) {
-			entity.second->update(dt);
-		} else {
-			remove(entity.first);
-			break;
-		}
-	}
+        if (entity.second->isActive()) {
+            entity.second->update(dt);
+        } else {
+            remove(entity.first);
+            break;
+        }
+    }
 }
 
 void EntityManager::remove(std::string entity) {
-	auto found = m_entities.find(entity);
-	m_entities.erase(found);
+    auto found = m_entities.find(entity);
+    m_entities.erase(found);
 }
 
 void EntityManager::draw() {
-	for (auto& entity : m_entities) {
-		m_window.draw(entity.second->getSprite());
-	}
+    for (auto& entity : m_entities) {
+        m_window.draw(entity.second->getSprite());
+    }
 }
 
 const bool EntityManager::exists(const std::string& name) const {
-	return m_entities.find(name) != m_entities.end();
+    return m_entities.find(name) != m_entities.end();
 }
 
 const Entity& EntityManager::getEntity(const std::string& name) const {
-	auto found = m_entities.find(name);
-	return *found->second;
+    auto found = m_entities.find(name);
+    return *found->second;
 }
