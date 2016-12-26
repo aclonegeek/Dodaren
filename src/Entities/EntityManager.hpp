@@ -17,9 +17,8 @@ public:
 	const bool exists(const std::string& name) const;
 	const Entity& getEntity(const std::string& name) const;
 private:
-	void remove();
+	void remove(std::string entity);
 
 	std::map<std::string, std::unique_ptr<Entity>> m_entities;
-	std::vector<std::string> m_entitiesToRemove;
 	sf::RenderWindow& m_window;
 };

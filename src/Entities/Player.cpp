@@ -5,7 +5,7 @@
 //todo:
 //	fix idle animations
 
-Player::Player(EntityManager& entityManager, sf::Vector2f& windowSize)
+Player::Player(EntityManager& entityManager, sf::Vector2f windowSize)
 	: m_entityManager{ entityManager }
 	, m_windowSize{ windowSize } 
 	, m_walkSpeed{ 150.0f } 

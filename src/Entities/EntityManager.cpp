@@ -19,19 +19,15 @@ void EntityManager::update(const sf::Time& dt) {
 		if (entity.second->isActive()) {
 			entity.second->update(dt);
 		} else {
-			m_entitiesToRemove.push_back(entity.first);
-			remove();
+			remove(entity.first);
 			break;
 		}
 	}
 }
 
-void EntityManager::remove() {
-	for (auto& entity : m_entitiesToRemove) {
-		auto& found = m_entities.find(entity);
-		m_entities.erase(found);
-	}
-	m_entitiesToRemove.clear();
+void EntityManager::remove(std::string entity) {
+	auto found = m_entities.find(entity);
+	m_entities.erase(found);
 }
 
 void EntityManager::draw() {

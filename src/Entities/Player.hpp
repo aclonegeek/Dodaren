@@ -9,7 +9,7 @@ enum class Direction {
 
 class Player : public Entity {
 public:
-	Player(EntityManager& entityManager, sf::Vector2f& windowSize);
+	Player(EntityManager& entityManager, sf::Vector2f windowSize);
 
 	void setupAnimations();
 	void handleInput(const sf::Time& dt);

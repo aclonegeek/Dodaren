@@ -9,9 +9,13 @@ GameState::GameState(StateManager& stateManager, sf::RenderWindow& window)
 	, m_entityManager{ m_window } 
 	, m_player{ std::make_unique<Player>(
 		m_entityManager, static_cast<sf::Vector2f>(m_window.getSize())) } {
-	std::cout << "[GameState] Initialized" << std::endl;
+	std::cout << "[GameState] Initialized\n";
 
 	m_entityManager.add("Player", std::move(m_player));
+}
+
+GameState::~GameState() {
+	std::cout << "[GameState] Destroyed\n";
 }
 
 void GameState::pause() {
