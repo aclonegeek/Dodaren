@@ -9,9 +9,7 @@ public:
     : m_stateManager{ stateManager }
     , m_window{ window } {}
     
-    virtual ~State() {
-
-    }
+    virtual ~State() {}
 
     virtual void pause() = 0;
     virtual void resume() = 0;
