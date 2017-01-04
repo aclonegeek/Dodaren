@@ -47,6 +47,6 @@ install(TARGETS Dodaren
 )
 
 # Install game data
-#install(DIRECTORY bin/res
-#    DESTINATION .
-#)
+install(DIRECTORY Resources
+    DESTINATION .
+)
