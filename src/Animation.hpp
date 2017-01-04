@@ -4,13 +4,9 @@
 
 #include <SFML/Graphics.hpp>
 
-// sprite sheet is 32x32, 3 anims per movement
-// each anim is on a different y
-
 class Animation {
 public:
-    Animation(sf::Sprite& sprite, float duration, int sourceX, int sourceY,
-        int width, int height, float posX, float posY);
+    Animation(sf::Sprite& sprite, float duration);
 
     void add(std::string name, int frames, int x, int y, int width, int height);
     void setVisible(bool visible);
