@@ -7,7 +7,7 @@ Dodaren is a 2D game framework made in C++ using SFML. It is currently a work in
 * Entity component system
 * Animation system
 
-# [TODO](https://github.com/aclonegeek/Dodaren/issues)
+# [TODO](https://github.com/aclonegeek/Dodaren/issues?q=is%3Aissue+is%3Aopen+label%3Atodo)
 
 # Resources
 * [SSM](https://github.com/aclonegeek/SSM)
