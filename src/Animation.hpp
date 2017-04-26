@@ -1,6 +1,6 @@
 #pragma once
 #include <vector>
-#include <map>
+#include <unordered_map>
 
 #include <SFML/Graphics.hpp>
 
@@ -18,7 +18,7 @@ private:
     sf::Sprite& m_spriteSheet;
 
     std::vector<sf::IntRect> m_frames;
-    std::map<std::string, std::vector<sf::IntRect>> m_animations;
+    std::unordered_map<std::string, std::vector<sf::IntRect>> m_animations;
     
     float m_duration;
     std::string m_currentAnimation;

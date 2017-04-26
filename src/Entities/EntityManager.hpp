@@ -1,8 +1,7 @@
 #pragma once
-#include <map>
+#include <unordered_map>
 #include <memory>
 #include <string>
-#include <vector>
 
 #include "Entity.hpp"
 
@@ -19,6 +18,6 @@ public:
 private:
     void remove(std::string entity);
 
-    std::map<std::string, std::unique_ptr<Entity>> m_entities;
+    std::unordered_map<std::string, std::unique_ptr<Entity>> m_entities;
     sf::RenderWindow& m_window;
 };

@@ -4,7 +4,7 @@
 #include <SFML/Audio/Music.hpp>
 #include <cassert>
 #include <memory>
-#include <map>
+#include <unordered_map>
 
 template <typename Resource, typename Identifier>
 class ResourceHandler {
@@ -30,7 +30,7 @@ private:
         assert(inserted.second);
     }
 
-    std::map<Identifier, std::unique_ptr<Resource>> m_resourceMap;
+    std::unordered_map<Identifier, std::unique_ptr<Resource>> m_resourceMap;
 };
 
 template <typename Music, typename Identifier>
@@ -57,7 +57,7 @@ private:
         assert(inserted.second);
     }
 
-    std::map<Identifier, std::unique_ptr<Music>> m_musicMap;
+    std::unordered_map<Identifier, std::unique_ptr<Music>> m_musicMap;
 };
 
 namespace Textures {
