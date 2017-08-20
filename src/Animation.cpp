@@ -1,6 +1,6 @@
 #include "Animation.hpp"
 
-Animation::Animation(sf::Sprite& spriteSheet, float duration) 
+Animation::Animation(sf::Sprite& spriteSheet, const float duration)
 : m_spriteSheet{ spriteSheet }
 , m_duration{ duration }
 , m_frameIndex{ 0 }
@@ -8,7 +8,7 @@ Animation::Animation(sf::Sprite& spriteSheet, float duration)
 , m_currentAnimation{ "" }
 , m_timeElapsed{ 0 } {}
 
-void Animation::add(std::string name, int frames, int x, int y, int width, int height) {
+void Animation::add(const std::string& name, int frames, int x, int y, int width, int height) {
     std::vector<sf::IntRect> rectangles;
 
     for (int i = 0; i < frames; i++) {
@@ -23,7 +23,7 @@ void Animation::reset() {
     m_animations.clear();
 }
 
-void Animation::play(std::string animation, bool playOnce /* = false */) {
+void Animation::play(const std::string& animation, bool playOnce /* = false */) {
     m_playOnce = playOnce;
     if (m_currentAnimation != animation) {
         m_currentAnimation = animation;

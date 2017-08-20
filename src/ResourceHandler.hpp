@@ -12,6 +12,7 @@ public:
     void load(Identifier id, const std::string& filePath) {
         std::unique_ptr<Resource> resource(new Resource());
 
+	// TODO(randy): Instead of throwing an error, load a default "error texture"
         if (!resource->loadFromFile(filePath)) {
             throw std::runtime_error("ResourceHandler::load - Failed to load " + filePath);
         }
